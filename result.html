@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Results - Excel Public School</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="./image-removebg-preview (15).png" alt="School Logo" class="logo">
+                <div class="school-name">Excel Public School</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html" data-page="home">Home</a></li>
+                <li><a href="./faculty.html" data-page="faculty">Faculty</a></li>
+                <li><a href="./about.html" data-page="about">About Us</a></li>
+                <li><a href="./result.html" data-page="results" class="active">Results</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Results Page -->
+    <div id="results" class="container">
+        <h2 class="section-title">Student Results</h2>
+        <div class="results-container">
+            <form id="resultForm" class="result-form">
+                <input type="text" class="result-input" placeholder="Enter Roll Number (e.g., EXL1234567)" required>
+                <button type="submit" class="result-btn">Check Result</button>
+            </form>
+
+            <div id="resultDisplay" class="result-display">
+                <div class="student-info">
+                    <div class="student-photo">
+                        <img src="/api/placeholder/100/100" alt="Student Photo">
+                    </div>
+                    <div class="student-details">
+                        <h3 id="studentName">Rahul Sharma</h3>
+                        <p class="student-class">Class: <span id="studentClass">X-A</span></p>
+                        <p class="student-roll">Roll Number: <span id="studentRoll">EXL2023001</span></p>
+                    </div>
+                </div>
+
+                <table class="result-table">
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Maximum Marks</th>
+                            <th>Marks Obtained</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="marksTableBody">
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+
+                <div class="result-summary">
+                    <h4>Result Summary</h4>
+                    <p>Total Marks: <span id="totalMarks">0</span> / <span id="maxMarks">0</span></p>
+                    <p>Percentage: <span id="percentage">0</span>%</p>
+                    <p>Result: <span id="resultStatus">PASS</span></p>
+                    <div class="grade">Grade: <span id="grade">A</span></div>
+                </div>
+            </div>
+
+            <div id="noResult" class="no-result">
+                No result found for the entered roll number. Please check and try again.
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
